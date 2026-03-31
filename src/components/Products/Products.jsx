@@ -1,32 +1,25 @@
-import React from 'react';
+import React, { use, useState } from 'react';
+import ProductsCard from '../ProductsCard/ProductsCard';
 
-const Products = () => {
+const Products = ({productsRes, carts, setCarts}) => {
+    
+     
+
+    const products = use(productsRes)
+    console.log(products)
+
     return (
-        <div>
-            <div className='text-center py-10'>
-                <h1 className='text-3xl font-semibold pb-3'>Premium Digital Tools</h1>
-                <p>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
+        <div className='max-w-7xl mx-auto px-6'>
+            
+
+            
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-max-7xl mx-auto'>
+                {
+                    products.map(product=> <ProductsCard key={product.id} product={product} carts={carts} setCarts={setCarts}></ProductsCard>
+                    )
+                }
             </div>
 
-            {/* name of each tab group should be unique */}
-            <div className="tabs tabs-box justify-center bg-transparent">
-                <input
-                    type="radio"
-                    name="my_tabs_1"
-                    className="tab rounded-full w-40"
-                    aria-label="Products"
-                    // onClick={() => setActiveTab("model")}
-                    defaultChecked
-                />
-                <input
-                    type="radio"
-                    name="my_tabs_1"
-                    className="tab rounded-full w-40"
-                     aria-label="Cart"
-                    // aria-label={`Cart (${carts.length})`}
-                    // onClick={() => setActiveTab("cart")}
-                />
-            </div>
         </div>
     );
 };

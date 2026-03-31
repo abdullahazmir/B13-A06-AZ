@@ -2,13 +2,13 @@
 import { FaShoppingCart } from "react-icons/fa";
 
 
-const NavBar = () => {
+const NavBar = ({ carts }) => {
   return (
     <div className="navbar">
       <div className="navbar-start">
         <div className="flex items-center gap-1 font-bold text-4xl pb-2 bg-linear-to-r from-blue-800 to-blue-400 bg-clip-text text-transparent ">
-          
-           DigiTools
+
+          DigiTools
         </div>
       </div>
       <div className="navbar-center hidden md:flex">
@@ -31,7 +31,16 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-5">
-  <FaShoppingCart />
+        <div
+          className="relative"
+          aria-label={`Cart (${carts.length})`}
+        >
+          <FaShoppingCart size={25} />
+
+          <span className="absolute -top-4 -right-4 bg-blue-500 text-white  px-2 py-0.5 rounded-full">
+            {carts.length}
+          </span>
+        </div>
 
         <p className="font-semibold">Log In</p>
 
