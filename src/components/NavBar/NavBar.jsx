@@ -15,25 +15,27 @@ const NavBar = ({ carts }) => {
 
   return (
     <div className="navbar">
-      <div className="navbar-start gap-4">
+      <div className="navbar-start items-center gap-1 md:gap-4">
         {
           open ? (
             <IoClose
-              className="md:hidden cursor-pointer"
+              className="md:hidden  cursor-pointer"
               onClick={toggleMenu}
-              size={40}
+              md:size={40}
+              size={20}
               color="blue"
             />
           ) : (
             <IoMenu
               className="md:hidden cursor-pointer"
               onClick={toggleMenu}
-              size={40}
+              md:size={40}
+              size={20}
               color="blue"
             />
           )
         }
-        <div className="flex items-center gap-1 font-bold text-4xl pb-2 bg-linear-to-r from-blue-800 to-blue-400 bg-clip-text text-transparent ">
+        <div className="flex items-center gap-1 font-bold text-lg md:text-4xl pb-2 bg-linear-to-r from-blue-800 to-blue-400 bg-clip-text text-transparent ">
 
           DigiTools
         </div>
@@ -41,7 +43,7 @@ const NavBar = ({ carts }) => {
 
 
        <div className="navbar-center hidden md:flex">
-        <ul className="menu menu-horizontal gap-10 px-1 text-lg">
+        <ul className="menu menu-horizontal gap-4 px-1 text-lg">
           <li>
             <a>Products</a>
           </li>
@@ -61,7 +63,7 @@ const NavBar = ({ carts }) => {
       </div>
 
       {/* for small device */}
-      
+
       {
         open && (
           <div className="absolute top-16 left-0 w-40 bg-white shadow-md md:hidden z-50">
@@ -83,7 +85,7 @@ const NavBar = ({ carts }) => {
 
 
 
-      <div className="navbar-end gap-5">
+      <div className="navbar-end gap-8 md:gap-5 ">
         <div
           className="relative"
           aria-label={`Cart (${carts.length})`}
@@ -95,9 +97,11 @@ const NavBar = ({ carts }) => {
           </span>
         </div>
 
-        <p className="font-semibold">Log In</p>
+        
+          <p className="font-semibold">Log In</p>
 
-        <a className="btn bg-linear-to-r from-blue-500 to-blue-400 rounded-full text-white"> Get Started</a>
+        <a className="  btn bg-linear-to-r from-blue-500 to-blue-400 rounded-full text-white"> Get Started</a>
+        
       </div>
     </div>
   );

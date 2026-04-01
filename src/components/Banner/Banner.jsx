@@ -14,7 +14,7 @@ const Banner = () => {
 
                     <h1 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tighter ">
 
-                        <span className="text-7xl">
+                        <span className="text-3xl md:text-7xl">
                             Supercharge Your <br />
                             Digital Workflow
                         </span>
