@@ -30,15 +30,15 @@ const handleRemove =(item)=>{
    {
     carts.length===0? <p className='text-3xl text-center font-bold'> Cart is empty</p> :  <>    <div>
                 {
-                carts.map(item => <div key={item.id} className='px-8  rounded-lg bg-zinc-100 flex justify-between'>
-                       <div>
-                         <img src="" alt="" />
+                carts.map(item => <div key={item.id} className='p-5 mb-4 rounded-lg bg-zinc-100 flex justify-between'>
+                       <div className='flex items-center gap-6'>
+                         <img src={item.icon} className='w-20 h-20 bg-sky-100 p-4 rounded-full ' />
                     <div>
                         <h1 className='text-2xl font-semibold'>{item.name}</h1>
                         <p className='font-semibold'>&{item.price}</p>
                     </div>
                        </div>
-                       <p onClick={()=>handleRemove(item)} className='text-red-800 btn btn-ghost flex items-center '>Remove</p>
+                       <p onClick={()=>handleRemove(item)} className='text-red-800 btn btn-ghost flex items-center py-4 '>Remove</p>
 
                 </div>)
             }
