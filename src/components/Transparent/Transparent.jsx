@@ -2,7 +2,7 @@ import React from 'react';
 
 const Transparent = () => {
     return (
-        <div className='max-w-7xl mx-auto px-6'>
+        <div className='max-w-7xl mx-auto mb-10 px-6'>
             <div className='text-center my-10'>
                 <h1 className='text-3xl font-semibold'>Simple, Transparent Pricing</h1>
                 <p>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
@@ -14,7 +14,7 @@ const Transparent = () => {
                     <div className="card-body">
                         <span className="badge badge-xs badge-warning">Regular</span>
                         <div className="flex justify-between">
-                            <h2 className="text-3xl font-bold">Premium</h2>
+                            <h2 className="text-3xl font-bold">Advanced</h2>
                             <span className="text-xl">$9/mo</span>
                         </div>
                         <ul className="mt-6 flex flex-col gap-2 text-xs">
@@ -94,7 +94,7 @@ const Transparent = () => {
                     <div className="card-body">
                         <span className="badge badge-xs badge-warning">Medium</span>
                         <div className="flex justify-between">
-                            <h2 className="text-3xl font-bold">Premium</h2>
+                            <h2 className="text-3xl font-bold">Signature</h2>
                             <span className="text-xl">$39/mo</span>
                         </div>
                         <ul className="mt-6 flex flex-col gap-2 text-xs">
