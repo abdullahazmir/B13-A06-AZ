@@ -28,7 +28,7 @@ const handleRemove =(item)=>{
             <h1 className='text-2xl text-center font-bold'>Your Cart</h1>
 
    {
-    carts.length===0? <p className='text-3xl text-center font-bold'> Cart is empty</p> :  <>    <div>
+    carts.length===0? <p className='text-3xl text-center font-semibold'>Cart is empty</p> :  <>    <div>
                 {
                 carts.map(item => <div key={item.id} className='p-5 mb-4 rounded-lg bg-zinc-100 flex justify-between'>
                        <div className='flex items-center gap-6'>
