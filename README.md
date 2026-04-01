@@ -1,16 +1,55 @@
-# React + Vite
+# 🚀 DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DigiTools is a modern AI-powered tools marketplace where users can explore, compare, and buy different digital products with a clean and responsive user interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 Description
 
-## React Compiler
+DigiTools helps users discover powerful AI tools and digital products in one place.
+It provides a smooth experience for browsing, adding to cart, and managing subscriptions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* ⚛️ React.js
+* 🎨 Tailwind CSS
+* 💡 JavaScript (ES6+)
+* 🔔 React Toastify
+* 📦 React Icons
+
+---
+
+## ✨ Features
+
+* 🛒 Add to Cart system with duplicate prevention
+* 📱 Fully responsive design (mobile + desktop)
+* 🔔 Toast notifications for user actions
+
+---
+
+## 🌐 Live Preview
+
+=> https://digitools-azmir-06.netlify.app/
+
+
+---
+
+## 📌 Future Improvements
+
+* 💳 Payment Integration
+* 📊 Dashboard for users
+* ❤️ Wishlist feature
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repo and contribute!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
