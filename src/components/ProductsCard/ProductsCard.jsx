@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import { Lia500Px } from 'react-icons/lia';
+import { toast } from 'react-toastify';
 
 const ProductsCard = ({ product, carts, setCarts }) => {
     const [isBuy, setIsBuy] =useState(false)
+
     const handleBuy= ()=>{
         setIsBuy(true)
+
+        const isFound = carts.find(item => item.id=== product.id)
+
+        if(isFound){
+            toast.error("item already in the cart!")
+            return;
+        }
         setCarts([...carts, product])
+
+        toast.success("Product added to cart!")
     }
     return (
         <div >

@@ -1,5 +1,7 @@
 import React from 'react';
 import { HiH1 } from 'react-icons/hi2';
+import { toast, ToastContainer } from 'react-toastify';
+
 
 const Carts = ({ carts, setCarts }) => {
 
@@ -7,11 +9,16 @@ const totalPrice = carts.reduce((sum, item) => sum+ item.price, 0)
 
 const handleProceed=()=>{
     setCarts([])
+     toast.success("Proceeded..!")
+    
 }
 
 const handleRemove =(item)=>{
     const filteredArray = carts.filter(fc=> fc.id !== item.id)
   setCarts(filteredArray)
+
+  toast.error("Deleted..!")
+  
     
 }
 
@@ -31,7 +38,7 @@ const handleRemove =(item)=>{
                         <p className='font-semibold'>&{item.price}</p>
                     </div>
                        </div>
-                       <p onClick={()=>handleRemove(item)} className='text-red-800 flex items-center '>Remove</p>
+                       <p onClick={()=>handleRemove(item)} className='text-red-800 btn btn-ghost flex items-center '>Remove</p>
 
                 </div>)
             }

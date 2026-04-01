@@ -9,6 +9,7 @@ import GetStarted from './components/GetStarted/GetStarted'
 import NavBar from './components/NavBar/NavBar'
 import Products from './components/Products/Products'
 import Transparent from './components/Transparent/Transparent'
+import { ToastContainer } from 'react-toastify'
 
 const getProducts = async () => {
   const res = await fetch('/Data.json')
@@ -39,11 +40,11 @@ function App() {
 
 
         {/* name of each tab group should be unique */}
-        <div className="tabs tabs-box justify-center bg-transparent">
-          <input
+        <div className="tabs tabs-box justify-center bg-transparent ">
+          <input 
             type="radio"
             name="my_tabs_1"
-            className="tab rounded-full w-40"
+            className="tab rounded-full w-40 "
             aria-label="Products"
             onClick={() => setActiveTab("products")}
             defaultChecked
@@ -75,6 +76,7 @@ function App() {
       <Transparent></Transparent>
       
       <Footer></Footer>
+     
     </>
   )
 }
